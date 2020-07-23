@@ -1,0 +1,27 @@
+package com.example.demo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@org.springframework.web.bind.annotation.RestController
+public class RestController {
+	@Autowired
+	private UserService repo;
+	
+	@GetMapping("/")
+	public String hello()
+	{
+		return "This is home page";
+	}
+	
+	@GetMapping("/save-user")
+	public String saveUser(@RequestParam String username,@RequestParam String firstname,@RequestParam String lastname,@RequestParam int age,@RequestParam String pass)
+	{
+		User user = new User(username,firstname,lastname,age,pass);
+		repo.saveMyUser(user);
+		return "User Saved";
+	}
+
+}

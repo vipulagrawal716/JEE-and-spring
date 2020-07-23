@@ -1,0 +1,7 @@
+package com.example.demo.repo;
+import 
+
+public class UserRepository extends CrudRepository<User,Integer>{
+	
+
+}

@@ -1,0 +1,22 @@
+package com.example.demo;
+
+import javax.transaction.Transactional;
+
+
+import org.springframework.stereotype.Service;
+
+@Service
+@Transactional
+public class UserService {
+	
+	private UserRepo repo2;
+	
+
+
+	public void saveMyUser(User user) {
+		System.out.println(user);
+		repo2.save(user);
+		
+	}
+
+}

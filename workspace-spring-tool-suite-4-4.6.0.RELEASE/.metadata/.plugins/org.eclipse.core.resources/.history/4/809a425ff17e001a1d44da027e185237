@@ -1,0 +1,16 @@
+spring.mvc.view.prefix=/WEB-INF/view/
+spring.mvc.view.suffix=.jsp
+
+
+
+server.port=8080
+spring.main.banner-mode=off
+spring.thymeleaf.cache=false
+spring.freemarker.cache=false
+spring.groovy.template.cache=false
+spring.datasource.url=jdbc:mysql://localhost:3306/learning?autoReconnect=true&useSSL=false
+spring.datasource.data-username=root
+spring.datasource.data-password=vipul
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true

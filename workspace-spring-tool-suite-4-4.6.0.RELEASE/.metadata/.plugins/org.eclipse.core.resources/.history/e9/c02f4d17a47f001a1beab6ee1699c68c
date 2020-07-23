@@ -1,0 +1,13 @@
+package com.example.demo.repo;
+
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.User;
+
+@Service
+public interface UserRepo extends CrudRepository<User,Integer>{
+	
+
+}
